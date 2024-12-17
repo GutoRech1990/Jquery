@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <style>
+            .bloco{
+                width: 200px;
+                height: 200px;
+                background-color: black;
+            }
+
+            p{
+                color: aliceblue;
+                text-align: center;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="bloco">
+        <p id="texto"></p>
+    </div>
+    
+
+    <script>
+        $('.bloco').click(function(){
+            $('#texto').text('Clicou no quadrado')
+        })
+
+        $('.bloco').mouseenter(function(){
+            $('#texto').text('Mouse entrou no quadrado')
+        })
+
+        $('.bloco').mouseleave(function(){
+            $('#texto').text('Mouse saiu no quadrado')
+        })
+    </script>
+</body>
+
+</html>
