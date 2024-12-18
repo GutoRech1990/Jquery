@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloco">
+        <p id="texto">Quadrado</p>
+    </div>
+
+
+    <script>
+        $('.bloco').on({
+            click: function () {
+                $("#texto").text("Clicou");
+                $(this).css("background-color", "blue");
+            },
+            mouseenter: function () {
+                $("#texto").text("Entrou");
+                $(this).css("background-color", "LightCoral");
+            },
+            mouseleave: function () {
+                $("#texto").text("Saiu");
+                $(this).css("background-color", "HotPink");
+            },
+            dblclick: function () {
+                $("#texto").text("Clicou 2x");
+                $(this).css("background-color", "Indigo");
+            }
+        })
+    </script>
+</body>
+
+</html>
