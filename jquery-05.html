@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .bloco, .bloco2 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        p {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloco">
+        <p id="texto">Quadrado</p>
+    </div>
+
+    <div class="bloco2">
+        <p id="texto2">Quadrado</p>
+    </div>
+
+
+    <script>
+        $('.bloco').on({
+            click: function () {
+                $("#texto").text("Clicou");
+                $(this).css("background-color", "blue");
+            },
+            mouseenter: function () {
+                $("#texto").text("Entrou");
+                $(this).css("background-color", "LightCoral");
+            },
+            mouseleave: function () {
+                $("#texto").text("Saiu");
+                $(this).css("background-color", "HotPink");
+            },
+            dblclick: function () {
+                $("#texto").text("Clicou 2x");
+                $(this).css("background-color", "Indigo");
+            }
+        })
+
+        $('.bloco2').on({
+            click: function () {
+                $("#texto2").text("Clicou");
+                $(this).css("background-color", "blue");
+            },
+            mouseenter: function () {
+                $("#texto2").text("Entrou");
+                $(this).css("background-color", "LightCoral");
+            },
+            mouseleave: function () {
+                $("#texto2").text("Saiu");
+                $(this).css("background-color", "HotPink");
+            },
+            dblclick: function () {
+                $("#texto2").text("Clicou 2x");
+                $(this).css("background-color", "Indigo");
+            }
+        })
+    </script>
+</body>
+
+</html>
